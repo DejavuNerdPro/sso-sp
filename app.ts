@@ -5,7 +5,7 @@ import customReq from "./utils/custom_request";
 const app = express();
 
 // Protected Route
-app.get("/protected", authenticate, (req, res) => {
+app.get("/protected", authenticate as any, (req, res) => {
   res.json({ message: "Welcome to the protected route!", user: (req as unknown as customReq).user });
 });
 
