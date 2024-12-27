@@ -12,4 +12,5 @@ app.get("/protected", authenticate as any, (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Service Provider running on http://localhost:${PORT}`);
+  console.log('Type of : ', typeof process.env.PORT,process.env.PORT);
 });
